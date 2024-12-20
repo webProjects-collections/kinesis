@@ -1,0 +1,162 @@
+---
+import Layout from "@layouts/Default.astro";
+import ButtonMain from "@components/base/ButtonMain.astro";
+import HeroMain from "@components/hero/HeroMain.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import SectionTitle from "@components/section/SectionTitle.astro";
+import IconBlock from "@components/content/IconBlock.astro";
+import Toolbar from "@components/content/doctors/grid/Toolbar.astro";
+import Filters from "@components/content/doctors/grid/Filters.astro";
+import Grid from "@components/content/doctors/grid/Grid.astro";
+import SideStatsRight from "@components/content/features/SideStatsRight.astro";
+import SideStatsLeft from "@components/content/features/SideStatsLeft.astro";
+import Pricing from "@components/content/Pricing.astro";
+import Cta from "@components/content/Cta.astro";
+import Testimonials from "@components/content/Testimonials.astro";
+---
+
+<Layout title="Home">
+  <HeroMain />
+
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        title="Poliambulatorio Padova"
+        subtitle="Il nostro poliambulatorio offre un'ampia gamma di servizi medici specialistici, con un team di professionisti altamente qualificati e tecnologie all'avanguardia"
+        minititle="I nostri servizi"
+      />
+
+      <div
+        class="grid md:grid-cols-3 ltablet:grid-cols-4 lg:grid-cols-4 gap-x-6 gap-y-12"
+        x-intersect="activeStep = ''"
+      >
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Fisioterapia"
+            text="Terapia manuali come massoterapia e mobilizzazione e terapie strumentali come onde d’urto, ultrasioni e taping muscolare."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2023/11/pexels-kampus-production-6111616-scaled-400x300.jpg"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Ortopedia"
+            text="Ortopedici specialisti in piede, ginocchio, spalla e mano per curare i disturbi come tunnel carpale, menisco, crociato o tendine d’Achille."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2023/01/ortopedico-del-ginocchio-sport-invernali-scaled-e1672677885718-400x300.jpg"
+            class="'text-rose-500'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Ginnastica Posturale"
+            text="Percorsi specifici e personalizzati per bambini, adulti ed anziani che necessitano di riabilitazione, ginnastica correttiva o ginnastica prescritta dal medico "
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2019/05/DSC_3352-sito-400x300.jpg"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="PRP"
+            text="Risolvi infiammazioni, problemi di artrosi o cartilagini grazie all’Acido Ialuronico e al PRP."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2023/06/medicina-rigenerativa-padova-400x300.jpg"
+            class="'text-rose-500'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Magnetoterapia"
+            text="Un trattamento  per alleviare il dolore e promuovere la guarigione. Usato per trattare condizioni come l’osteoartrite, fratture ossee e disturbi legati all’infiammazione."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2017/07/MAGNETOTERAPIA2-400x300.jpg"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Tecarterapia"
+            text="Utilizza correnti ad alta frequenza per trattare vari disturbi muscolo-scheletrici. È efficace nel migliorare la circolazione e accelerare i processi di guarigione."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2019/02/DSCF7859-e1549536861283-400x280.jpg"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Ginnastica Correttiva"
+            text="Esercizi specifici per correggere disallineamenti e squilibri muscolari. È utilizzata per trattare e prevenire problemi posturali nei bambini e negli adolescenti."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2019/05/DSC_3368-Copia-400x300.jpg"
+            class="'text-primary-600'"
+          />
+        </div>
+        <!-- Item -->
+        <div>
+          <IconBlock
+            title="Fibromialgia"
+            text="Una condizione cronica di dolore muscolare diffuso, fatica e altri sintomi. Il trattamento può includere terapie fisiche e strategie per gestire lo stress."
+            imgSrc="https://www.kinesismed.it/wp-content/uploads/2021/11/Fibromialgia_1-400x300.png"
+            class="'text-primary-600'"
+          />
+        </div>
+      </div>
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted class="'border-b border-muted-200 dark:border-muted-800'">
+    <Container>
+      <SectionTitle
+        title="Il nostro team di medici"
+        subtitle="Il nostro team di medici altamente qualificati combina esperienza, competenza e passione per garantire la migliore assistenza possibile ai nostri pazienti"
+        minititle="Team"
+        class="'mx-auto text-center'"
+      />
+
+      <div id="doctors" x-data="doctors()" x-intersect="activeStep = 'spy-1'">
+        <Toolbar />
+
+        <!--Grid wrapper-->
+        <div class="py-10">
+          <div class="grid grid-cols-12 md:gap-12 pb-20">
+            <!--Filters-->
+            <div class="hidden lg:block col-span-12 lg:col-span-3">
+              <Filters />
+            </div>
+            <!--Content-->
+            <div class="col-span-12 lg:col-span-9">
+              <!--Subgrid-->
+              <Grid />
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-10">
+            <ButtonMain to="#" class="'w-64 !h-14 max-w-full'"
+              >View All Doctors</ButtonMain
+            >
+          </div>
+        </div>
+      </div>
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        title="Amano Kinesis"
+        subtitle="Le nostre recensioni parlano da sole. Scopri cosa dicono di noi"
+        minititle="I Nostri Pazienti"
+        class="'mx-auto text-center'"
+      />
+      <Testimonials />
+    </Container>
+  </SectionMuted>
+
+  <SectionMuted>
+    <Container>
+      <Cta />
+    </Container>
+  </SectionMuted>
+</Layout>

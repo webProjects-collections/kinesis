@@ -1,0 +1,110 @@
+<div
+  class="sticky top-24 md:top-20 w-full flex bg-white dark:bg-muted-800 border border-muted-200 dark:border-muted-700 rounded divide-x divide-muted-200 dark:divide-muted-700 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/30 overflow-x-auto z-30"
+>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'all' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'all'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'all' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:first-aid-duotone"></iconify-icon>
+    </span>
+    <span>All</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'ortopedia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'ortopedia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'ortopedia' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:person-duotone"></iconify-icon>
+    </span>
+    <span>Ortopedia</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'cardiologia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'cardiologia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'cardiologia' ? 'text-rose-500' : ' text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:heartbeat-duotone"></iconify-icon>
+    </span>
+    <span>Cardiologia</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'psicologia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'psicologia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'psicologia' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:brain-duotone"></iconify-icon>
+    </span>
+    <span>Psicologia</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'oncologia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'oncologia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'oncologia' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:pill-duotone"></iconify-icon>
+    </span>
+    <span>Oncologia</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'chirurgia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'chirurgia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'chirurgia' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:syringe-duotone"></iconify-icon>
+    </span>
+    <span>Chirurgia</span>
+  </button>
+
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'dermatologia' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'dermatologia'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'dermatologia' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <iconify-icon
+        class="iconify w-6 h-6 flex items-center justify-center text-2xl"
+        icon="ph:hand-soap-duotone"></iconify-icon>
+    </span>
+    <span>Dermatologia</span>
+  </button>
+</div>

@@ -1,0 +1,14 @@
+---
+const { class: className, imgSrc, title, text } = Astro.props;
+---
+
+<div class="font-sans">
+  <img
+    class="max-w-sm w-full h-full lg:min-h-[240px] object-fit"
+    src={imgSrc}
+  />
+  <h4 class="font-light text-lg mb-2 text-muted-800 dark:text-muted-100">
+    {title}
+  </h4>
+  <p class="text-sm text-muted-500 dark:text-muted-400">{text}</p>
+</div>

@@ -1,0 +1,33 @@
+---
+import Card from "@components/base/Card.astro";
+
+const { name, content, imageSrc, date } = Astro.props;
+---
+
+<div class="swiper-slide">
+  <Card class="'p-6'">
+    <div class="w-full flex flex-col gap-8 font-sans">
+      <iconify-icon
+        class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500"
+        icon="fa6-solid:quote-left"></iconify-icon>
+      <p class="text-muted-500 dark:text-muted-300">
+        {content}
+      </p>
+      <div class="w-full flex items-center gap-3">
+        <div class="shrink-0 inline-flex relative w-10 h-10">
+          <img
+            src={imageSrc}
+            class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+            alt="User image"
+          />
+        </div>
+        <div>
+          <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+            {name}
+          </h4>
+          <p class="text-xs text-muted-400">{date}</p>
+        </div>
+      </div>
+    </div>
+  </Card>
+</div>

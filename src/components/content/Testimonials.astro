@@ -1,0 +1,69 @@
+---
+import Testimonial from "@components/content/Testimonial.astro";
+---
+
+<div x-cloak class="relative overflow-hidden" x-intersect="activeStep = ''">
+  <div x-data="swiper()" class="carousel-container">
+    <div class="carousel-controls flex items-center justify-end mb-4">
+      <button
+        class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300"
+        @click="swiper.slidePrev()"
+      >
+        <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
+      </button>
+
+      <button
+        class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300"
+        @click="swiper.slideNext()"
+      >
+        <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
+      </button>
+    </div>
+    <div class="swiper-container" x-ref="container">
+      <div class="swiper-wrapper">
+        <Testimonial
+          name="Laura Rossi"
+          content="Ho usufruito del servizio di dietologia. La dott. Toson è gentile, simpatica ed estremamente competente"
+          imageSrc="https://lh3.googleusercontent.com/a-/ALV-UjUmXHyMNC1hs738WzAFNh1bKqzpMAlLnUo4G5l17GgFPWw=w40-h40-c-rp-mo-br100"
+          date="21/02/2024"
+        />
+        <Testimonial
+          name="Maurizio Busti "
+          content="Precisi e gentili"
+          imageSrc="https://lh3.googleusercontent.com/a/ACg8ocIrdw6WiETtkra6AduabfcRAQwC6LCWXkYgfUXZOU-n=w40-h40-c-rp-mo-ba2-br100"
+          date="12/02/2024"
+        />
+        <Testimonial
+          name="Vittoria Beggiato"
+          content="Un ringraziamento particolare va al Prof. Maurizio Ercolino, persona speciale e dall’ormai rara umanità. Grazie di cuore davvero!!"
+          imageSrc="https://lh3.googleusercontent.com/a-/ALV-UjVxv1Ae7gLEhxpyQq1aZfOZE8geTd066So8RdBbmfPYEQ=w40-h40-c-rp-mo-br100"
+          date="07/02/2024"
+        />
+        <Testimonial
+          name="Anna Maria Basilisco"
+          content="Puntualità professionalità e accoglienza molto positive"
+          imageSrc="https://lh3.googleusercontent.com/a/ACg8ocKWgI_bSAjm3xm1LSsUHxrvKaXSn54szmhxVud8LmZ-=w40-h40-c-rp-mo-br100"
+          date="05/02/2024"
+        />
+        <Testimonial
+          name="Fiorenza Panerai"
+          content="Esperienza assolutamente positiva,personale professionale e molto accogliente"
+          imageSrc="https://lh3.googleusercontent.com/a/ACg8ocKNv03UKxggHZkPxONbGYzAExMUXM6kDYobStqzN50r=w40-h40-c-rp-mo-br100"
+          date="31/01/2024"
+        />
+        <Testimonial
+          name="Luca Perna"
+          content="Grandi medici e grande personale consigliassimo"
+          imageSrc="https://lh3.googleusercontent.com/a/ACg8ocIuZ1vuxd5KxEb1jQSG3LZLLVIT2BzpSj7nVjE6z3K0=w40-h40-c-rp-mo-br100"
+          date="28/01/2024"
+        />
+        <Testimonial
+          name="Roberto Voltolina"
+          content="https://lh3.googleusercontent.com/a/ACg8ocKbdRx6yCAM_DCplTrjHP59aQNn__KVTjBhyt3stfKU=w40-h40-c-rp-mo-ba4-br100"
+          imageSrc="https://lh3.googleusercontent.com/a/ACg8ocKbdRx6yCAM_DCplTrjHP59aQNn__KVTjBhyt3stfKU=w40-h40-c-rp-mo-ba4-br100"
+          date="13/01/2024"
+        />
+      </div>
+    </div>
+  </div>
+</div>
